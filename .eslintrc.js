@@ -17,8 +17,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
+    '@typescript-eslint/no-unused-vars'
   ],
-  rules: {
-  }
+  rules: {}
 }
