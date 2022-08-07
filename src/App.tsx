@@ -1,21 +1,11 @@
 import { useState, MouseEventHandler } from 'react'
 import { currencyDataList } from './constants/currencyData.const'
+import {
+  generateRandomId,
+  getValueById,
+  resetValueById
+} from './utils'
 import './App.css'
-
-function generateRandomId () {
-  return Math.random().toString(16).slice(2)
-}
-
-function getValueById (id: string) {
-  return (document.getElementById(id) as HTMLInputElement | null)?.value || ''
-}
-
-function resetValueById (id: string) {
-  const el = (document.getElementById(id) as HTMLInputElement | null)
-  if (el) {
-    el.value = ''
-  }
-}
 
 function App () {
   const [ownPrice, setOwnPrice] = useState(5000)
